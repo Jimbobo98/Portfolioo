@@ -45,6 +45,18 @@ function setTheme(themeName) {
 
   updateModeIcon(themeName);
 
+  const portrait = document.querySelector(".portrait-img");
+  const portrait_txt = document.querySelector(".portrait-info");
+  if (portrait && themeName === "goblin") {
+    portrait.src = "/img/Gobbo.png";
+    portrait_txt.textContent =
+      "En av flere character-designs, men denne liker jeg best! >:D";
+  } else if (portrait && themeName !== "goblin") {
+    portrait.src = "/img/The Gilded Relapse-onepic.png";
+    portrait_txt.textContent =
+      "En av flere character-designs, men denne er min aller første!";
+  }
+
   // Save choice in local storage
   localStorage.setItem(themeKey, themeName);
 }
