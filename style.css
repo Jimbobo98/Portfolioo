@@ -5,6 +5,36 @@
   font-style: normal;
 }
 
+/* Theme Switchers */
+
+:root,
+[data-theme="light"] {
+  --text-color: #000;
+  --background-color: #f5f0e0;
+  --main-color: #ff8c42;
+  --accent-color: #ffaa33;
+  --container-bg: #2f2f2f;
+  --container-border: #ff8c42;
+}
+
+[data-theme="dark"] {
+  --text-color: #212a54;
+  --background-color: #051229;
+  --main-color: #0a1f3a;
+  --accent-color: #1e4a8c;
+  --container-bg: #7d44ff;
+  --container-border: #b388ff;
+}
+
+[data-theme="goblin"] {
+  --text-color: #ff8c42;
+  --background-color: #c9ffc7;
+  --main-color: #1a2e1a;
+  --accent-color: #6bc96b;
+  --container-bg: #4a8c4a;
+  --container-border: #6bc96b;
+}
+
 /* Smooth scrolling for the whole page */
 html {
   scroll-behavior: smooth !important;
@@ -20,8 +50,8 @@ html {
 
 /* Active nav link style */
 .nav-link.active {
-  background-color: #ff8c42 !important;
-  color: #000000 !important;
+  background-color: var(--main-color);
+  color: var(--text-color);
   transform: translateY(-4px);
 }
 
@@ -33,7 +63,6 @@ html {
   image-rendering: pixelated;
   image-rendering: crisp-edges;
 }
-
 
 .Footer-1 {
   margin-top: 20px;
@@ -48,14 +77,14 @@ html {
   text-align: center;
   color: white;
   text-shadow: 2px 2px 4px #000000;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   pointer-events: none;
 }
 
 .Header-text h1 {
   margin: 0;
   font-size: 4rem;
-  color: #ff8c42;
+  color: var(--main-color);
 }
 
 .Header-text p {
@@ -85,7 +114,7 @@ html {
 .nav-link {
   position: relative;
   padding: 12px 28px;
-  font-family: 'Press Start 2P', cursive;
+  font-family: "Press Start 2P", cursive;
   font-size: 1rem;
   color: #ffaa33;
   text-decoration: none;
@@ -106,7 +135,7 @@ html {
 
 /* Subtle glitch hover effect */
 .nav-link:hover::after {
-  content: '';
+  content: "";
   position: absolute;
   inset: 0;
   background: linear-gradient(
@@ -157,8 +186,8 @@ html {
   max-height: 100%;
   object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.6);
-  image-rendering: pixelated; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+  image-rendering: pixelated;
 }
 
 /* Art boxes (Block-2 and Block-3) */
@@ -172,7 +201,7 @@ html {
   box-sizing: border-box;
   background-image: url(./img/Mini\ asset\ set.png);
   background-repeat: no-repeat;
-  background-size: contain; 
+  background-size: contain;
   background-position: center;
 }
 
@@ -182,7 +211,7 @@ html {
   flex: 1 1 50%;
   min-width: 300px;
   color: #000000;
-  font-family: 'Courier New', Courier, monospace;
+  font-family: "Courier New", Courier, monospace;
   padding: 40px;
 }
 
@@ -201,11 +230,21 @@ html {
 
 /* Glitch animation keyframes */
 @keyframes glitch {
-  0%   { transform: translate(0); }
-  20%  { transform: translate(-1px, 1px); }
-  40%  { transform: translate(1px, -1px); }
-  60%  { transform: translate(-1px, 0); }
-  100% { transform: translate(0); }
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-1px, 1px);
+  }
+  40% {
+    transform: translate(1px, -1px);
+  }
+  60% {
+    transform: translate(-1px, 0);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 
 /* Projects section */
@@ -215,7 +254,7 @@ html {
   border-radius: 12px;
   padding: 48px 32px;
   margin: 60px 0;
-  box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
 
 .projects-section h2 {
@@ -247,20 +286,20 @@ html {
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.25s ease;
-  box-shadow: 0 6px 16px rgba(0,0,0,0.5);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
   display: flex;
   flex-direction: column;
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 14px 28px rgba(255,140,66,0.35);
+  box-shadow: 0 14px 28px rgba(255, 140, 66, 0.35);
   border-color: #ffaa33;
 }
 
 .project-thumbnail {
   width: 100%;
-  height: 240px;                    
+  height: 240px;
   background-color: #0f0f0f;
   display: flex;
   justify-content: center;
@@ -278,7 +317,7 @@ html {
   object-fit: contain;
   border: 2px solid #ffaa33;
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(255,140,66,0.25);
+  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.25);
 }
 
 .project-thumbnail .slime-gif {
@@ -288,9 +327,9 @@ html {
 
 .project-card .card-content {
   padding: 24px;
-  flex-grow: 1;                     
-  background: rgba(40, 40, 40, 0.9); 
-  color: #f0f0f0;                   
+  flex-grow: 1;
+  background: rgba(40, 40, 40, 0.9);
+  color: #f0f0f0;
 }
 
 .project-card h3 {
