@@ -1,5 +1,7 @@
 const body = document.body;
 const themeKey = "theme";
+const header = document.getElementById("header-img");
+const footer = document.getElementById("footer-img");
 
 function initialTheme() {
   const storedTheme = localStorage.getItem(themeKey);
@@ -23,12 +25,25 @@ function toggleDarkMode() {
 }
 
 function activateGoblinMode() {
-  setTheme("goblin");
+  if (localStorage.getItem(themeKey) !== "goblin") {
+    setTheme("goblin");
+  } else {
+    const systemPrefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)",
+    ).matches;
+    const nextTheme = systemPrefersDark ? "dark" : "light";
+    setTheme(nextTheme);
+  }
 }
 
 function setTheme(themeName) {
   // Update the body
   body.setAttribute("data-theme", themeName);
+
+  header.src = `img/header-${themeName}.png`;
+  footer.src = `img/footer-${themeName}.png`;
+
+  updateModeIcon(themeName);
 
   // Save choice in local storage
   localStorage.setItem(themeKey, themeName);
@@ -40,7 +55,7 @@ function updateModeIcon(theme) {
 
   let btnText = "⏾";
   if (theme == "dark") btnText = "☀︎";
-  if (theme == "goblin") btnText = "G";
+  if (theme == "goblin") btnText = "GOBLIN MODE";
 
   modeIcon.textContent = btnText;
 }

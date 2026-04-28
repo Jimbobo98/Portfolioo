@@ -1,69 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio</title>
-    <link rel="icon" type="image/png" sizes="16x16" href="./img/Favicon-slimo-16x16.png">
-    <link rel="stylesheet" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Press+Start+2P&family=Shadows+Into+Light&display=swap" rel="stylesheet">
-    <script defer "./theme.js"></script>
-</head>
-<body>
-
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./img/Favicon-slimo-16x16.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Press+Start+2P&family=Shadows+Into+Light&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./theme.js" defer></script>
+  </head>
+  <body>
     <!-- Header -->
-     <div id="top"></div>
-    <img class="Header-1" src="img/Header_320_Retro-gray.png" alt="Header">
+    <div id="top"></div>
+    <img
+      class="Header-1"
+      id="header-img"
+      src="img/header-light.png"
+      alt="Header"
+    />
 
     <div class="Block-1"></div>
 
     <!-- Navigation -->
     <nav class="Pixel-nav">
-    <a href="#top" class="nav-link active">Home</a>
-    <a href="about.html" class="nav-link">About Me</a>
-    <a href="projects.html" class="nav-link">Projects</a>
-    <a href="contact.html" class="nav-link">Contact</a>
+      <a href="#top" class="nav-link active">Home</a>
+      <a href="about.html" class="nav-link">About Me</a>
+      <a href="projects.html" class="nav-link">Projects</a>
+      <a href="contact.html" class="nav-link">Contact</a>
+      <button class="theme-toggle-btn" onclick="toggleDarkMode()">
+        <p class="icon-theme-switch"></p>
+      </button>
     </nav>
 
     <!-- First section: art on left, text on right -->
     <div class="two-column-wrapper">
-        <!-- Left: art box -->
-        <div class="Block-2"></div>
+      <!-- Left: art box -->
+      <div class="Block-2"></div>
 
-        <!-- Header text overlay -->
-        <div class="Header-text">
-            <h1>Kodehode</h1>
-            <p>Hei! Mitt navn er Jimmy <br><br> And welcome in!</p>
-        </div>
+      <!-- Header text overlay -->
+      <div class="Header-text">
+        <h1>
+          K<span class="secret" onclick="activateGoblinMode()">o</span>dehode
+        </h1>
+        <p>
+          Hei! Mitt navn er Jimmy <br /><br />
+          And welcome in!
+        </p>
+      </div>
 
-        <!-- Right: lorem ipsum -->
-        <div class="lorem-text">
-            <h2>Lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+      <!-- Right: lorem ipsum -->
+      <div class="lorem-text">
+        <h2>Lorem ipsum</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </div>
     </div>
-
 
     <!-- Second section: text on left, art on right -->
     <div class="two-column-wrapper reverse-order">
-        <!-- Left: lorem ipsum -->
-        <div class="lorem-text-2">
-            <h2>Lorem ipsum</h2>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
+      <!-- Left: lorem ipsum -->
+      <div class="lorem-text-2">
+        <h2>Lorem ipsum</h2>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat.
+        </p>
+        <p>
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.
+        </p>
+      </div>
 
-        <!-- Right: art box -->
-        <div class="Block-3"></div>
+      <!-- Right: art box -->
+      <div class="Block-3"></div>
     </div>
 
     <!-- Footer -->
     <footer>
-        <img class="Footer-1" src="./img/Footer_320_Retro-Orange.png" alt="Footer">
+      <img
+        class="Footer-1"
+        id="footer-img"
+        src="./img/footer-light.png"
+        alt="Footer"
+      />
     </footer>
-
-</body>
+  </body>
 </html>

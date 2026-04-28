@@ -13,17 +13,21 @@
   --background-color: #f5f0e0;
   --main-color: #ff8c42;
   --accent-color: #ffaa33;
+  --glitch-color: #ff8c42;
   --container-bg: #2f2f2f;
   --container-border: #ff8c42;
+  --shadow-color: #000;
 }
 
 [data-theme="dark"] {
-  --text-color: #212a54;
+  --text-color: #00bfff;
   --background-color: #051229;
   --main-color: #0a1f3a;
   --accent-color: #1e4a8c;
+  --glitch-color: #00bfff;
   --container-bg: #7d44ff;
   --container-border: #b388ff;
+  --shadow-color: #000;
 }
 
 [data-theme="goblin"] {
@@ -33,6 +37,7 @@
   --accent-color: #6bc96b;
   --container-bg: #4a8c4a;
   --container-border: #6bc96b;
+  --shadow-color: #1a3e1a;
 }
 
 /* Smooth scrolling for the whole page */
@@ -45,7 +50,11 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  background-color: #f5f0e0;
+}
+
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
 }
 
 /* Active nav link style */
@@ -58,10 +67,12 @@ html {
 /* Header & footer images */
 .Header-1,
 .Footer-1 {
+  position: relative;
   width: 100%;
   height: auto;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
+  z-index: 1;
 }
 
 .Footer-1 {
@@ -76,20 +87,24 @@ html {
   transform: translate(-50%, -50%);
   text-align: center;
   color: white;
-  text-shadow: 2px 2px 4px #000000;
+  text-shadow: 2px 2px 4px var(--shadow-color);
   font-family: "Press Start 2P", cursive;
-  pointer-events: none;
+  background-color: transparent;
+  z-index: 10;
 }
 
 .Header-text h1 {
   margin: 0;
   font-size: 4rem;
-  color: var(--main-color);
+  color: var(--text-color);
+  background-color: transparent;
+  z-index: 10;
 }
 
 .Header-text p {
   margin-top: 30%;
   font-size: 1.5rem;
+  background-color: transparent;
 }
 
 /* Pixelated nav bar */
@@ -97,8 +112,8 @@ html {
   width: 100%;
   height: 64px;
   background-color: #1a1a1a;
-  border-top: 4px solid #ffaa33;
-  border-bottom: 4px solid #ffaa33;
+  border-top: 4px solid var(--accent-color);
+  border-bottom: 4px solid var(--accent-color);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -116,10 +131,10 @@ html {
   padding: 12px 28px;
   font-family: "Press Start 2P", cursive;
   font-size: 1rem;
-  color: #ffaa33;
+  color: var(--text-color);
   text-decoration: none;
   background-color: #2f2f2f;
-  border: 3px solid #ff8c42;
+  border: 3px solid var(--accent-color);
   border-radius: 8px;
   transition: all 0.15s ease;
   box-shadow: 0 4px 0 #000000;
@@ -127,7 +142,7 @@ html {
 
 .nav-link:hover,
 .nav-link.active {
-  background-color: #ff8c42;
+  background-color: var(--accent-color);
   color: #000000;
   transform: translateY(-6px);
   box-shadow: 0 10px 0 #000000;
@@ -141,18 +156,20 @@ html {
   background: linear-gradient(
     45deg,
     transparent 48%,
-    rgba(255, 140, 66, 0.4) 50%,
+    var(--glitch-color) 50%,
     transparent 52%
   );
   pointer-events: none;
   animation: glitch 0.3s infinite alternate;
+  border: 2px solid var(--glitch-color);
+  border-radius: 5px;
 }
 
 /* Thin orange bar under header */
 .Block-1 {
   width: 100%;
   height: 10px;
-  background-color: #ffaa33;
+  background-color: var(--accent-color);
   margin-top: -5px;
 }
 
@@ -172,7 +189,7 @@ html {
   min-width: 400px;
   height: 500px;
   background-color: #2f2f2f;
-  border: 3px solid #ffaa33;
+  border: 3px solid var(--accent-color);
   box-sizing: border-box;
   display: flex;
   justify-content: center;
@@ -197,7 +214,7 @@ html {
   min-width: 400px;
   height: 500px;
   background-color: #2f2f2f;
-  border: 3px solid #ffaa33;
+  border: 3px solid var(--accent-color);
   box-sizing: border-box;
   background-image: url(./img/Mini\ asset\ set.png);
   background-repeat: no-repeat;
@@ -210,7 +227,7 @@ html {
 .lorem-text-2 {
   flex: 1 1 50%;
   min-width: 300px;
-  color: #000000;
+  color: var(--text-color);
   font-family: "Courier New", Courier, monospace;
   padding: 40px;
 }
@@ -219,7 +236,7 @@ html {
 .lorem-text-2 h2 {
   margin-top: 0;
   font-size: 2.5rem;
-  color: #ff8c42;
+  color: var(--text-color);
 }
 
 .lorem-text p,
@@ -250,7 +267,7 @@ html {
 /* Projects section */
 .projects-section {
   background-color: #1a1a1a;
-  border: 4px solid #ffaa33;
+  border: 4px solid var(--accent-color);
   border-radius: 12px;
   padding: 48px 32px;
   margin: 60px 0;
@@ -259,14 +276,14 @@ html {
 
 .projects-section h2 {
   text-align: center;
-  color: #ff8c42;
+  color: var(--text-color);
   font-size: 3rem;
   margin-bottom: 32px;
 }
 
 .projects-section p {
   text-align: center;
-  color: #000000;
+  color: var(--text-color);
   font-size: 1.15rem;
   margin-bottom: 48px;
   line-height: 1.7;
@@ -282,7 +299,7 @@ html {
 /* Individual card */
 .project-card {
   background-color: #222222;
-  border: 3px solid #ff8c42;
+  border: 3px solid var(--accent-color);
   border-radius: 12px;
   overflow: hidden;
   transition: all 0.25s ease;
@@ -306,7 +323,7 @@ html {
   align-items: center;
   padding: 16px;
   box-sizing: border-box;
-  border-bottom: 4px solid #ff8c42;
+  border-bottom: 4px solid var(--accent-color);
 }
 
 .project-thumbnail img {
@@ -314,10 +331,10 @@ html {
   max-height: 100%;
   image-rendering: pixelated;
   image-rendering: crisp-edges;
-  object-fit: contain;
-  border: 2px solid #ffaa33;
+  object-fit: fit;
+  border: 2px solid var(--accent-color);
   border-radius: 6px;
-  box-shadow: 0 4px 12px rgba(255, 140, 66, 0.25);
+  box-shadow: 0 4px 12px var(--accent-color);
 }
 
 .project-thumbnail .slime-gif {
@@ -333,18 +350,49 @@ html {
 }
 
 .project-card h3 {
-  color: #ffaa33;
+  color: var(--text-color);
   font-size: 1.5rem;
   margin: 0 0 12px 0;
   text-align: center;
 }
 
 .project-card p {
-  color: #000000;
+  color: var(--text-color);
   font-size: 1rem;
   line-height: 1.6;
   margin: 0;
   text-align: center;
+}
+
+span {
+  cursor: pointer;
+  background-color: transparent;
+  user-select: none;
+  z-index: 9999;
+}
+
+.theme-toggle-btn {
+  background-color: #2f2f2f;
+  border: 3px solid var(--accent-color);
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  box-shadow: 0 4px 0 #000000;
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 8px 0 #000000;
+}
+
+.icon-theme-switch {
+  color: var(--text-color);
+  font-weight: bold;
 }
 
 @media (max-width: 768px) {
