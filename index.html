@@ -20,6 +20,9 @@
     <script src="./theme.js" defer></script>
   </head>
   <body>
+    <button class="theme-toggle-btn" onclick="toggleDarkMode()">
+      <p class="icon-theme-switch"></p>
+    </button>
     <!-- Header -->
     <div id="top"></div>
     <img
@@ -37,9 +40,6 @@
       <a href="about.html" class="nav-link">About Me</a>
       <a href="projects.html" class="nav-link">Projects</a>
       <a href="contact.html" class="nav-link">Contact</a>
-      <button class="theme-toggle-btn" onclick="toggleDarkMode()">
-        <p class="icon-theme-switch"></p>
-      </button>
     </nav>
 
     <!-- First section: art on left, text on right -->
@@ -101,12 +101,15 @@
 
     <!-- Footer -->
     <footer>
-      <img
-        class="Footer-1"
-        id="footer-img"
-        src="./img/footer-light.png"
-        alt="Footer"
-      />
+      <div>
+        <img
+          class="Footer-1"
+          id="footer-img"
+          src="./img/footer-light.png"
+          alt="Footer"
+        />
+        <h3 class="back-txt">BACK TO TOP</h3>
+      </div>
     </footer>
   </body>
 </html>

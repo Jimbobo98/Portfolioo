@@ -197,14 +197,20 @@ body {
   padding: 20px;
 }
 
-.selfie,
-.Alert {
+.selfie {
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
   border-radius: 8px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
   image-rendering: pixelated;
+}
+
+.Alert {
+  width: 100%;
+  height: 100%;
+  image-rendering: pixelated;
+  object-fit: contain;
 }
 
 /* Art boxes (Block-2 and Block-3) */
@@ -321,20 +327,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 16px;
-  box-sizing: border-box;
-  border-bottom: 4px solid var(--accent-color);
+  overflow: hidden;
 }
 
 .project-thumbnail img {
-  max-width: 100%;
-  max-height: 100%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
   image-rendering: pixelated;
-  image-rendering: crisp-edges;
-  object-fit: fit;
-  border: 2px solid var(--accent-color);
-  border-radius: 6px;
-  box-shadow: 0 4px 12px var(--accent-color);
 }
 
 .project-thumbnail .slime-gif {
@@ -372,6 +373,9 @@ span {
 }
 
 .theme-toggle-btn {
+  position: sticky;
+  top: 10px;
+  left: 97%;
   background-color: #2f2f2f;
   border: 3px solid var(--accent-color);
   border-radius: 8px;
@@ -382,6 +386,7 @@ span {
   justify-content: center;
   transition: all 0.15s ease;
   box-shadow: 0 4px 0 #000000;
+  z-index: 10000;
 }
 
 .theme-toggle-btn:hover {
@@ -393,6 +398,11 @@ span {
 .icon-theme-switch {
   color: var(--text-color);
   font-weight: bold;
+}
+
+.back-txt {
+  position: relative;
+  text-align: center;
 }
 
 @media (max-width: 768px) {
