@@ -65,11 +65,11 @@ function updateModeIcon(theme) {
   const modeIcon = document.querySelector(".icon-theme-switch");
   if (!modeIcon) return;
 
-  let btnText = "⏾";
-  if (theme == "dark") btnText = "☀︎";
-  if (theme == "goblin") btnText = "GOBLIN MODE";
+  let btnIcon = "./img/Moon.png";
+  if (theme == "dark") btnIcon = "./img/Sun.png";
+  if (theme == "goblin") btnIcon = "./img/Gobbo.png";
 
-  modeIcon.textContent = btnText;
+  modeIcon.src = btnIcon;
 }
 
 initialTheme();
