@@ -1,2 +1,26 @@
 Navy blue background - #0a1f3a
 Goblin green background - #c9ffc7
+
+
+All Navy blue colors ->
+
+#0a1f3a
+#1e4a8c
+#00bfff
+#7d44ff ---------- Box inside color
+#b388ff
+#051229 ---------- Use this as main background color
+#e0f0ff
+#212a54 ---------- Box, what splits footer to main content - Also text color 
+
+All Goblin green colors ->
+
+#1a2e1a
+#1a3e1a
+#4a8c4a ---------- Box inside color
+#6bc96b
+#ff8c42 ---------- Box, what splits footer to main content - Also text color
+#00ffcc
+#a0ff9d
+#c9ffc7 ---------- Main background color
+#c8f0c8
