@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kodehode - Jimmy's Portfolio</title>
+  <title>Kodehode - Jimmy | Retro Pixel Artist</title>
   <link rel="icon" type="image/png" sizes="16x16" href="./img/Favicon-slimo-16x16.png" />
   <link rel="stylesheet" href="style.css" />
   <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Shadows+Into+Light&display=swap" rel="stylesheet" />
@@ -11,136 +11,108 @@
 </head>
 <body>
 
-  <!-- Theme Toggle -->
   <button class="theme-toggle-btn" onclick="toggleDarkMode()">
     <img class="icon-theme-switch" src="img/Sun.png" alt="Theme" />
   </button>
 
-<!-- Header -->
   <div id="top"></div>
   <img class="Header-1" id="header-img" src="img/header-light.png" alt="Header" />
-
   <div class="Block-1"></div>
 
-  <!-- Navigation -->
   <nav class="Pixel-nav">
     <a href="#home" class="nav-link active">Home</a>
-    <a href="#about" class="nav-link">About Me</a>
+    <a href="#about" class="nav-link">About</a>
     <a href="#projects" class="nav-link">Projects</a>
+    <a href="#commissions" class="nav-link">Commissions</a>
     <a href="#contact" class="nav-link">Contact</a>
   </nav>
 
-  <!-- HOME -->
+  <!-- HOME / HERO -->
   <section id="home">
     <div class="two-column-wrapper">
       <div class="Block-2"></div>
-
       <div class="Header-text">
         <h1>K<span class="secret" onclick="activateGoblinMode()">o</span>dehode</h1>
-        <p>Hei! Mitt navn er Jimmy <br /><br />And welcome in!</p>
+        <p class="tagline">RETRO PIXEL ARTIST &amp; WEB DEVELOPER</p>
+        <p>Hei! Mitt navn er Jimmy.<br>Making chaotic retro pixel art from Norway 🔥</p>
       </div>
-
-      <div class="lorem-text">
-        <h2>Lorem ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      </div>
-    </div>
-
-    <div class="two-column-wrapper reverse-order">
-      <div class="lorem-text-2">
-        <h2>Lorem ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-      </div>
-      <div class="Block-3"></div>
     </div>
   </section>
 
   <!-- ABOUT -->
   <section id="about">
+    <h2 class="section-title">About Me</h2>
     <div class="two-column-wrapper">
       <div class="Block-2-selfie">
-        <img src="./img/Skjermbilde 2025-09-30 093132.png" alt="Selfie" class="selfie" />
+        <img src="./img/Skjermbilde 2025-09-30 093132.png" alt="Jimmy" class="selfie" />
       </div>
-
       <div class="lorem-text">
-        <h2>About Me</h2>
-        <p>Hei! Mitt navn er Jimmy. Jeg er en selvlært pixel artist og webutvikler fra Norge. Akkurat nå lærer jeg masse gjennom Kodehode, og jeg digger å lage retro-inspirert kunst med glitch-effekter og kaotisk energi.</p>
-        <p>Jeg har ingen formell utdanning innen kunst eller kode, men jeg rawdogger alt i Aseprite og VS Code. Favorittfargene mine er oransje, svart og grønn – og jeg digger å gjøre ting som ser ut som de er fra et gammelt spill, men med en moderne vri.</p>
-        <p>Når jeg ikke lager sprites eller fikser CSS, spiller jeg spill, drikker kaffe, eller henger med venner. Velkommen til porteføljen min – her viser jeg det jeg har lært så langt!</p>
+        <p>Self-taught pixel artist and web developer. I love creating retro-styled art with modern energy.</p>
+        <p>No art school — just Aseprite, VS Code and lots of coffee.</p>
       </div>
     </div>
   </section>
 
-  <!-- PROJECTS - All 4 cards -->
+  <!-- PROJECTS -->
   <section id="projects">
-    <div class="projects-section">
-      <h2>Projects</h2>
-      <p>Her er noen av prosjektene jeg har jobbet med. Alt er laget i Aseprite og VS Code – mest pixel art, men også enkel web og små spillidéer.</p>
-
-      <div class="project-grid">
-        <div class="project-card">
-          <div class="project-thumbnail">
-            <img src="img/The Gilded Relapse-onepic.png" alt="Første character portrait" class="portrait-img" />
-          </div>
-          <h3>Character Portretter</h3>
-          <p class="portrait-info">En av flere character-designs, men denne er min aller første!</p>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumbnail">
-            <img src="img/projects/code-goblin-thumbnail.png" alt="Code-goblin" />
-          </div>
-          <h3>Code-goblin</h3>
-          <p>En smug liten gremlin som ødelegger kode. Statisk sprite + kommende animasjoner.</p>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumbnail">
-            <img src="./img/Mini asset set.png" alt="Mini Asset Pack" />
-          </div>
-          <h3>Mini Asset Pack</h3>
-          <p>HUD-elementer, inventory, health hearts – alt i retro-stil.</p>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumbnail">
-            <img src="./img/Bouncy Slime-Recovered4.gif" alt="Slimo Animation" class="slime-gif" />
-          </div>
-          <h3>Slimo Animation</h3>
-          <p>Bouncy slime-karakter med idle, move og attack frames.</p>
-        </div>
+    <h2 class="section-title">Projects</h2>
+    <div class="project-grid">
+      <!-- Your 4 cards -->
+      <div class="project-card">
+        <div class="project-thumbnail"><img src="img/The Gilded Relapse-onepic.png" alt="Character Portraits"></div>
+        <h3>Character Portraits</h3>
+        <p>My first serious character designs.</p>
       </div>
+      <div class="project-card">
+        <div class="project-thumbnail"><img src="img/projects/code-goblin-thumbnail.png" alt="Code Goblin"></div>
+        <h3>Code Goblin</h3>
+        <p>Chaotic gremlin sprite + animations coming.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-thumbnail"><img src="./img/Mini asset set.png" alt="Asset Pack"></div>
+        <h3>Mini Asset Pack</h3>
+        <p>Retro HUD, hearts, inventory elements.</p>
+      </div>
+      <div class="project-card">
+        <div class="project-thumbnail"><img src="./img/Bouncy Slime-Recovered4.gif" alt="Slimo" class="slime-gif"></div>
+        <h3>Slimo Animation</h3>
+        <p>Fully animated bouncy slime character.</p>
+      </div>
+    </div>
+  </section>
 
-      <p class="more-coming">Mer kommer snart – jeg jobber hele tiden på nye ting!</p>
+  <!-- COMMISSIONS -->
+  <section id="commissions">
+    <h2 class="section-title">Commissions</h2>
+    <div class="lorem-text" style="max-width: 800px; margin: 0 auto; text-align: center;">
+      <p><strong>Open for work!</strong></p>
+      <p>Pixel art characters • Animations • Asset packs • Small websites</p>
+      <p>Turnaround: 3–14 days • DM me for pricing</p>
     </div>
   </section>
 
   <!-- CONTACT -->
   <section id="contact">
+    <h2 class="section-title">Contact</h2>
     <div class="two-column-wrapper">
       <div class="Block-2-wompus">
-        <img src="./img/Alert Wompus-extra.png" alt="" class="Alert" />
+        <img src="./img/Alert Wompus-extra.png" alt="Wompus" class="Alert" />
       </div>
-
       <div class="lorem-text">
-        <h2>Contact</h2>
-        <p>Hei! Gøy at du er her. Du kan nå meg på disse stedene:</p>
-        <ul style="line-height: 2; font-size: 1.2rem; list-style: none; padding-left: 0;">
-          <li><strong>X / Twitter:</strong> <a href="https://x.com/ItsUstable" style="color: #ff8c42">@ItsUstable</a></li>
-          <li><strong>Email:</strong> <a href="mailto:jimmy.kodehode@gmail.com" style="color: #ff8c42">jimmy.kodehode@gmail.com</a></li>
-          <li><strong>Discord:</strong> Jimbobo30 (eller skriv til meg på X)</li>
+        <p>Send me a message!</p>
+        <ul>
+          <li><strong>X:</strong> <a href="https://x.com/ItsUstable">@ItsUstable</a></li>
+          <li><strong>Email:</strong> <a href="mailto:jimmy.kodehode@gmail.com">jimmy.kodehode@gmail.com</a></li>
+          <li><strong>Discord:</strong> Jimbobo30</li>
         </ul>
-        <p>Om du har et prosjekt, en idé, eller bare vil si hei – send melding! Jeg svarer som regel innen et par dager.</p>
       </div>
     </div>
   </section>
 
-  <!-- Footer -->
   <footer>
     <div class="footer-container">
       <img class="Footer-1" id="footer-img" src="./img/footer-light.png" alt="Footer" />
-      <a class="back-txt" href="#top">BACK TO TOP</a>
+      <a class="back-txt" href="#top">BACK TO TOP ↑</a>
     </div>
   </footer>
 
