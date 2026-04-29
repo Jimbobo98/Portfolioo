@@ -387,7 +387,7 @@ span {
 
 .theme-toggle-btn {
   position: fixed;
-  top: 10px;
+  top: 4px;
   left: 95%;
   background-color: var(--background-toggle);
   border: 3px solid var(--accent-color);
