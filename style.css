@@ -455,4 +455,35 @@ span {
   }
 }
 
-/* Holder */
+/* ==================== DARK & GOBLIN CONTRAST FIX ==================== */
+
+/* Dark Mode - Better readability */
+[data-theme="dark"] {
+  --text-color: #bbfffc !important;
+  color: #bbfffc !important;
+}
+
+[data-theme="dark"] .lorem-text p,
+[data-theme="dark"] .lorem-text-2 p,
+[data-theme="dark"] h2,
+[data-theme="dark"] h3 {
+  color: #bbfffc !important;
+}
+
+/* Goblin Mode - Better readability */
+[data-theme="goblin"] {
+  --text-color: #2a2a00 !important;
+  color: #2a2a00 !important;
+}
+
+[data-theme="goblin"] .lorem-text p,
+[data-theme="goblin"] .lorem-text-2 p,
+[data-theme="goblin"] h2,
+[data-theme="goblin"] h3 {
+  color: #2a2a00 !important;
+}
+
+/* Links */
+a {
+  color: #ffdd77 !important;
+}
