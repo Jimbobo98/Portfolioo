@@ -455,35 +455,44 @@ span {
   }
 }
 
-/* ==================== DARK & GOBLIN CONTRAST FIX ==================== */
+/* ==================== STRONG CONTRAST FIX - DARK & GOBLIN ==================== */
 
-/* Dark Mode - Better readability */
-[data-theme="dark"] {
-  --text-color: #bbfffc !important;
+/* Dark Mode */
+[data-theme="dark"] body,
+[data-theme="dark"] * {
   color: #bbfffc !important;
 }
 
-[data-theme="dark"] .lorem-text p,
-[data-theme="dark"] .lorem-text-2 p,
+[data-theme="dark"] .lorem-text,
+[data-theme="dark"] .lorem-text-2,
+[data-theme="dark"] h1,
 [data-theme="dark"] h2,
-[data-theme="dark"] h3 {
+[data-theme="dark"] h3,
+[data-theme="dark"] p {
   color: #bbfffc !important;
 }
 
-/* Goblin Mode - Better readability */
-[data-theme="goblin"] {
-  --text-color: #2a2a00 !important;
+/* Goblin Mode */
+[data-theme="goblin"] body,
+[data-theme="goblin"] * {
   color: #2a2a00 !important;
 }
 
-[data-theme="goblin"] .lorem-text p,
-[data-theme="goblin"] .lorem-text-2 p,
+[data-theme="goblin"] .lorem-text,
+[data-theme="goblin"] .lorem-text-2,
+[data-theme="goblin"] h1,
 [data-theme="goblin"] h2,
-[data-theme="goblin"] h3 {
+[data-theme="goblin"] h3,
+[data-theme="goblin"] p {
   color: #2a2a00 !important;
 }
 
 /* Links */
 a {
+  color: #ffdd77 !important;
+}
+
+[data-theme="dark"] a,
+[data-theme="goblin"] a {
   color: #ffdd77 !important;
 }
