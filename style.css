@@ -20,6 +20,7 @@
   --container-text: var(--nav-color);
   --shadow-color: #000;
   --background-toggle: #f5f0e0;
+  --header-color: #ff8c42;
 }
 
 [data-theme="dark"] {
@@ -34,6 +35,7 @@
   --container-text: var(--text-color);
   --shadow-color: #000;
   --background-toggle: #2f2f2f;
+  --header-color: var(--text-color);
 }
 
 [data-theme="goblin"] {
@@ -47,6 +49,7 @@
   --container-text: var(--text-color);
   --shadow-color: #1a3e1a;
   --background-toggle: #2f2f2f;
+  --header-color: var(--text-color);
 }
 
 /* Smooth scrolling for the whole page */
@@ -105,7 +108,7 @@ body {
 .Header-text h1 {
   margin: 0;
   font-size: 4rem;
-  color: var(--text-color);
+  color: var(--header-color);
   background-color: transparent;
   z-index: 10;
 }
@@ -405,9 +408,28 @@ span {
   box-shadow: 0 8px 0 #000000;
 }
 
-.back-txt {
+.footer-container {
   position: relative;
-  text-align: center;
+  width: 100%;
+}
+
+.back-txt {
+  position: absolute;
+  left: 50%;
+  bottom: 45%;
+  transform: translateX(-50%);
+  z-index: 100;
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--main-color);
+  font-family: "Press Start 2P", cursive;
+  transition: transform 0.25s ease;
+}
+
+.back-txt:hover {
+  color: var(--accent-color);
+  transform: translateX(-50%) scale(1.1);
+  text-shadow: 2px 2px 4px var(--shadow-color);
 }
 
 @media (max-width: 768px) {
